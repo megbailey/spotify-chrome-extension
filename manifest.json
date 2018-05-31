@@ -1,0 +1,27 @@
+{
+	"name": "Sporify Player Handler",
+		"version": "1.0",
+		"description": "Attempting to build a small Spotify interface!",
+		"permissions": ["activeTab","declarativeContent", "storage"],
+		"background": {
+			"scripts": ["background.js"],
+			"persistent": true
+		},
+		"options_page": "options.html",
+		"page_action": {
+			"default_popup": "popup.html",
+			"default_icon": {
+				"2": "images/spotify-green-black.png",
+				"4": "images/spotify-green-white.png",
+				"8": "images/spotify-black-green.png",
+				"16": "images/spotify-black-white.png"
+			}
+		},
+		"icons": {
+			"2": "images/spotify-green-black.png",
+			"4": "images/spotify-green-white.png",
+			"8": "images/spotify-black-green.png",
+			"16": "images/spotify-black-white.png"
+		},
+		"manifest_version": 2
+}
