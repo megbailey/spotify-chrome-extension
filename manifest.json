@@ -1,10 +1,10 @@
 {
-	"name": "Sporify Player Handler",
-		"version": "1.0",
+	"name": "Spotify Player Toggler",
+		"version": "0.1.0",
 		"description": "Attempting to build a small Spotify interface!",
 		"permissions": ["activeTab","declarativeContent", "storage"],
 		"background": {
-			"scripts": ["background.js"],
+			"scripts": ["player.js"],
 			"persistent": true
 		},
 		"options_page": "options.html",
