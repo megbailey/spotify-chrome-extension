@@ -9,7 +9,7 @@
 		},
 		"options_page": "options.html",
 		"page_action": {
-			"default_popup": "popup.html",
+			"default_popup": "player.html",
 			"default_icon": {
 				"2": "images/spotify-green-black.png",
 				"4": "images/spotify-green-white.png",
