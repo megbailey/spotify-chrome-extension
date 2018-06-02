@@ -2,14 +2,14 @@
 	"name": "Spotify Player Toggler",
 		"version": "0.1.0",
 		"description": "Attempting to build a small Spotify interface!",
-		"permissions": ["activeTab","declarativeContent", "storage"],
+		"permissions": ["activeTab"],
 		"background": {
-			"scripts": ["player.js"],
+			"scripts": ["auth.js"],
 			"persistent": true
 		},
 		"options_page": "options.html",
 		"page_action": {
-			"default_popup": "player.html",
+			"default_popup": "window.html",
 			"default_icon": {
 				"2": "images/spotify-green-black.png",
 				"4": "images/spotify-green-white.png",
