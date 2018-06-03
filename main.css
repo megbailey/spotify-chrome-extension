@@ -24,20 +24,19 @@
   cursor: pointer;
   width: 134px;
   background-size: auto;
+  background-repeat:no-repeat;
   margin: 10px 0;
   cursor: pointer;
 }
 
 .dark .logo {
   	background: url(images/spotify-black-green.png);
-    background-repeat:no-repeat;
-    background-size:auto;
 }
 
 .player {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   overflow: hidden;
 }
 
@@ -51,10 +50,10 @@
 }
 .album {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 180px;
-  height: 180px;
+  top: 10px;
+  left: 50px;
+  width: 80px;
+  height: 80px;
   background-color: #F4F4F4;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
@@ -117,7 +116,7 @@
 
 .buttons {
   display: flex;
-  padding: 10px;
+  padding: 00px;
   width: 100%;
 }
 
@@ -131,7 +130,7 @@
   justify-content: space-between;
   align-self: center;
   width: 100%;
-  padding: 0 20px 0 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 .dark .controller__skip-back {
@@ -157,8 +156,8 @@
 .controller__play-pause {
   width: 54px;
   font-size: 24px;
-  border-radius: 300px;
-  padding: 10px 10px;
+  border-radius: 200px;
+  padding: 0px 0px;
   outline: 0!important;
 }
 
