@@ -1,24 +1,35 @@
 {
 	"name": "Spotify Player",
 		"version": "0.1.0",
+		
 		"description": "Attempting to build a small Spotify interface!",
-		"permissions": ["activeTab", "storage", "tabs", "https://open.spotify.com/*","contextMenus"],
+		
 		"background": {
-			"scripts": ["auth.js"],
+			"scripts": [
+			"require.js", 
+			"node_modules/express/index.js",
+			"main.js"
+			],
 			"persistent": false
 		},
-		"options_page": "/html/options.html",
-		"page_action": {
-			"default_popup": "/html/main.html",
-			"default_icon": {
-				"images/spotify-black-green.png"
-			}
+		
+		"browser_action": {
+			"default_popup": "main.html",
+			"default_icon": "/images/spotify-black-green.png"
 		},
+		
+		"options_page": "/html/options.html",
+		
+		"permissions": [
+		"activeTab", 
+		"storage", 
+		"tabs",
+		"contextMenus",
+		"https://open.spotify.com/*"
+		],
+		
 		"icons": {
-			"images/spotify-green-black.png",
-			"images/spotify-green-white.png",
-			"images/spotify-black-green.png",
-			"images/spotify-black-white.png"
+			"16": "images/spotify-black-green.png"
 		},
 		"manifest_version": 2
 }
