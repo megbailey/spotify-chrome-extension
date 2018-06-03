@@ -1,15 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Spotify Web Player Control</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-    <script src="../scripts/main.js"></script>
-  </head>
-
-  <body class="dark" style="display:flex">
+    <title>Example of the Implicit Grant flow with Spotify</title>
     <style type="text/css">
       #login, #loggedin {
         display: none;
@@ -23,8 +15,10 @@
     </style>
   </head>
 
+  <body>
     <div class="container">
       <div id="login">
+        <h1>This is an example of the Implicit Grant flow</h1>
         <button id="login-button" class="btn btn-primary">Log in with Spotify</button>
       </div>
       <div id="loggedin">
@@ -54,57 +48,6 @@
         </div>
       </div>
     </script>
-	<div class="main flex">
-      <div id="open" class="logo"></div>
-      <div class="player">
-        <div class="effect" id="background-album"></div>
-        <div class="album" id="album-art"></div>
-      </div>
-      <div class="track flex flex-1" id="current-track">
-        <div class="track-name">
-          <strong id="current-track-name"></strong>
-        </div>
-        <div class="track-artist">
-          <span id="current-track-artist"></span>
-        </div>
-      </div>
-      <div class="controller flex flex-1">
-        <div id="previous" class="controller__skip-back disabled">
-          <span  class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
-        </div>
-        <button id="play-pause" disabled="true" type="button" class="play">
-          <span class="glyphicon glyphicon-play"></span>
-        </button>
-        <div id="next" class="controller__skip-back disabled">
-          <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
-        </div>
-      </div>
-      <div class="buttons">
-        <button id="color-body" class="btn-color-body" type="button"></button>
-        <button id="show-lyrics" type="button" class="show-lyrics-button">Lyrics</button>
-      </div>
-    </div>
-    <div id="container-lyrics" style="display:none"></div>
-  </body>
-    <script id="user-profile-template" type="text/x-handlebars-template">
-      <h1>Logged in as {{display_name}}</h1>
-      <div class="media">
-        <div class="pull-left">
-          <img class="media-object" width="150" src="{{images.0.url}}" />
-        </div>
-        <div class="media-body">
-          <dl class="dl-horizontal">
-            <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
-            <dt>Id</dt><dd>{{id}}</dd>
-            <dt>Email</dt><dd>{{email}}</dd>
-            <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
-            <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
-            <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
-            <dt>Country</dt><dd>{{country}}</dd>
-          </dl>
-        </div>
-      </div>
-    </script>
 
     <script id="oauth-template" type="text/x-handlebars-template">
       <h2>oAuth info</h2>
@@ -112,12 +55,11 @@
         <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
       </dl>
     </script>
-	
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src=../scripts/auth.js></script>
-	<script>
-	(function() {
+    <script>
+      (function() {
         var stateKey = 'spotify_auth_state';
         /**
          * Obtains parameters from the hash of the URL
@@ -177,8 +119,8 @@
           }
           document.getElementById('login-button').addEventListener('click', function() {
             var client_id = 'ac7f0ddc10f341808cdab32e631ffb78'; // Your client id
-            var redirect_uri = 'https://www.spotify.com/us/'; // Your redirect uri
-            var state = generateRandomString(16);
+			var redirect_uri = 'https://www.spotify.com/us/';
+			var state = generateRandomString(16);
             localStorage.setItem(stateKey, state);
             var scope = 'user-read-private user-read-email';
             var url = 'https://accounts.spotify.com/authorize';
@@ -191,6 +133,6 @@
           }, false);
         }
       })();
-	  </script>
-
+    </script>
 </html>
+
