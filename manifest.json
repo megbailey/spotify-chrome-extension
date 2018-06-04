@@ -3,10 +3,10 @@
 		"version": "0.1.0",
 		
 		"description": "Attempting to build a small Spotify interface!",
-		
+		"minimum_chrome_version": "46",
 		"background": {
 			"scripts": [
-			"require.js", 
+			"scripts/require.js",
 			"node_modules/express/index.js",
 			"scripts/handlebars.js",
 			"scripts/jquery.js",
