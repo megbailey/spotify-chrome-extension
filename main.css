@@ -104,10 +104,9 @@
   border-color: #84bd00;
 }
 
-.dark .btn-color-body {
+.dark .btn-login {
   background: transparent;
   border: 2px solid #88898c;
-  border-right: 0;
   border-radius: 4px 0 0 4px;
   color: #dfe0e6;
   padding: 5px 15px;

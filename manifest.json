@@ -8,6 +8,8 @@
 			"scripts": [
 			"require.js", 
 			"node_modules/express/index.js",
+			"scripts/handlebars.js",
+			"scripts/jquery.js",
 			"main.js"
 			],
 			"persistent": false
