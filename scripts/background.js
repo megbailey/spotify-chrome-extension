@@ -11,3 +11,5 @@ chrome.runtime.onInstalled.addListener(function() {
 chrome.contextMenus.onClicked.addListener(function(/*info, tab*/){
 	handlePlayOrPauseClick(); // calls main.js method;
 });
+
+chrome.runtime.onMessage.addListener(callback);
