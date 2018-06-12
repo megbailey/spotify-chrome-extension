@@ -1,6 +1,6 @@
 
 
-(function() {
+(function authentication () {
         var stateKey = 'spotify_auth_state';
         /**
          * Obtains parameters from the hash of the URL
@@ -63,7 +63,7 @@
             var redirect_uri = 'https://www.spotify.com/us/'; // Your redirect uri
             var state = generateRandomString(16);
             localStorage.setItem(stateKey, state);
-            var scope = 'user-read-private user-read-email';
+            var scope = 'user-modify-playback-state streaming user-read-currently-playing user-read-playback-state';
             var url = 'https://accounts.spotify.com/authorize';
             url += '?response_type=token';
             url += '&client_id=' + encodeURIComponent(client_id);
