@@ -1,6 +1,5 @@
 
-
-(function authentication () {
+function () {
         var stateKey = 'spotify_auth_state';
         /**
          * Obtains parameters from the hash of the URL
@@ -58,6 +57,8 @@
               $('#login').show();
               $('#loggedin').hide();
           }
+
+
           document.getElementById('login-button').addEventListener('click', function() {
             var client_id = 'ac7f0ddc10f341808cdab32e631ffb78'; // Your client id
             var redirect_uri = 'https://www.spotify.com/us/'; // Your redirect uri
@@ -73,4 +74,4 @@
             window.location = url;
           }, false);
         }
-      })();
+      });

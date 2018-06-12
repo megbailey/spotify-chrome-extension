@@ -6,7 +6,7 @@ var playPause = document.getElementById('play-pause');
 var previous = document.getElementById('previous');
 var next = document.getElementById('next');
 var login = document.getElementById('login-button');
-
+/*
 var Chrome = {
 	executeScript: function (options, callback) {
 		var tab = options.tab
@@ -35,7 +35,7 @@ var Spotify = {
 		}, callback)
 	}
 }
-
+*/
 /*
 playPause.onclick = function(callback) {
 	var currentState = spotifyApi.getMyCurrentPlaybackstate();
@@ -47,7 +47,29 @@ playPause.onclick = function(callback) {
 		spotifyApi.pause(callback);
 	}
 };
+*/
 
+function togglePlayPause () {
+	var result= spotifyApi.getMyCurrentPlaybackState();	
+	var state = result.is_playing;
+	var playPauseButton = document.getElementById('play-pause');
+	var playPauseClassName = 'glyphicon glyphicon-play';
+	switch (state) {
+		case 'playing':
+			playPauseClassName = 'glyphicon glyphicon-pause';
+			playPauseButton.removeAttribute('disabled', true);
+			break;
+		case 'paused':
+			playPauseButton.removeAttribute('disabled', true);
+			break;
+		case 'disabled':
+			playPauseButton.setAttribute('disabled', true);
+	}
+	playPauseButton.getElementsByTagName('span')[0].className = playPauseClassName;
+}
+
+
+/*
 previous.onclick = function (callback) {
 	spotifyApi.skipToPrevious(callback);
 	chrome.contextMenus.update(spotifyApi.getMyCurrentPlayingTrack(), callback);
@@ -57,8 +79,9 @@ next.onclick = function (callback) {
 	spotifyApi.skipToNext(callback);
 	chrome.contextMenus.update(spotifyApi.getMyCurrentPlayingTrack(), callback);
 };
-*/
+
 login.onclick = function () {
 	authentication();
 };
 
+*/
