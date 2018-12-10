@@ -34,8 +34,8 @@
 }
 
 .player {
-  position: relative;
-  width: 180px;
+  position: center;
+  width: 200px;
   height: 180px;
   overflow: hidden;
 }
@@ -49,11 +49,12 @@
   -webkit-filter: blur(5px);
 }
 .album {
-  position: absolute;
-  top: 10px;
-  left: 50px;
-  width: 80px;
-  height: 80px;
+  position: center;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
   background-color: #F4F4F4;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
@@ -147,10 +148,12 @@
   cursor: pointer;
 }
 
+/*
 .controller__skip-back.disabled > .glyphicon {
   color: #7B7B7B;
   cursor: not-allowed;
 }
+*/
 
 .controller__play-pause {
   width: 54px;
@@ -160,10 +163,12 @@
   outline: 0!important;
 }
 
+/*
 .disabled {
   color: #7B7B7B;
   cursor: not-allowed;
 }
+*/
 
 .green {
   color: #84BD00!important;

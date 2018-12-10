@@ -3,8 +3,6 @@
   <head>
     <title>Spotify Web Player</title>
     
-	<script type='text/javascript' src=scripts/require.js></script>
-	<script data-main='main.js' src=scripts/require.js></script>
 	
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -26,7 +24,7 @@
 
   <body class="dark" style="display:flex">
        
-	  <!-- User Profile -->
+	  <!-- User Profile
 	  <script id="user-profile-template" type="text/x-handlebars-template"></script>
       <div class="media">
         <div class="media-body">
@@ -38,16 +36,18 @@
       </div> 
   	<div class="main flex">
 	  <div id="open" class="logo"></div>
-    
+     -->
 	  
-	  <!-- Album -->
-	  <div class="player">
+    <!-- Album -->
+    <div class="row">
+      <div class="column">
+	    <div class="player">
         <div class="effect" id="background-album"></div>
         <div class="album" id="album-art"></div>
       </div>
     
 	  
-	  <!-- Track -->
+    <!-- Track -->
 	  <div class="track flex flex-1" id="current-track">
 		<div class="track-name">
 			<strong id="current-track-name"></strong>
@@ -55,21 +55,23 @@
 		<div class="track-artist">
           <span id="current-track-artist"></span>
         </div>
-	  </div>
+    </div>
     
 	  
-	  <!-- Play/Pause/Skip Controls  -->
+    <!-- Play/Pause/Skip Controls  -->
 	  <div class="controller flex flex-1">
-        <div id="previous" class="controller__skip-back disabled">
+        <div id="previous" class="controller__skip-back">
           <span  class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
         </div>
-        <button id="play-pause" disabled="true" type="button" class="play">
+        <button id="play-pause" type="button" class="play">
           <span class="glyphicon glyphicon-play"></span>
         </button>
-        <div id="next" class="controller__skip-back disabled">
+        <div id="next" class="controller__skip-back">
           <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
         </div>
       </div>
+      </div>
+    </div>
 	
 
 	<!-- Login Button -->
@@ -81,8 +83,7 @@
 	</body>
 	
 	<script id="oauth-template" type="text/x-handlebars-template"></script>
-    <script type="text/javascript" src=scripts/handlebars.js></script>
-    <script type="text/javascript" src=scripts/jquery.js></script>
+  <script type="text/javascript" src=scripts/handlebars.js></script>
 	<script type="text/javascript" src=scripts/auth.js></script>
 	<script type='text/javascript' src=scripts/background.js></script>
 
